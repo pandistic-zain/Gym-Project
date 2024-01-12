@@ -93,7 +93,7 @@ html {
 #Home-Section::before {
   content: "";
   position: absolute;
-  background: url("bg.jpg") no-repeat center center/cover;
+  background: url("Pictures/bg.jpg") no-repeat center center/cover;
   height: 100%; /* Adjusted height to cover the whole screen */
   top: 0px;
   left: 0px;
@@ -156,7 +156,7 @@ html {
   width: 100%;
   z-index: -1;
   opacity: 0.6;
-  background: url("contact.jpg") no-repeat top center/cover; /* Set background image properties */
+  background: url("Pictures/contact.jpg") no-repeat top center/cover; /* Set background image properties */
 }
 
 #contact-box {
@@ -205,7 +205,7 @@ html {
 #Partners-Section::before {
   content: "";
   position: absolute;
-  background: url("background.jpg") no-repeat center center/cover;
+  background: url("Pictures/background.jpg") no-repeat center center/cover;
   width: 100%;
   height: 100%;
   z-index: -1;
