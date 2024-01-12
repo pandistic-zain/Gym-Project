@@ -5,7 +5,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 /* CSS Variables */
@@ -17,7 +17,9 @@ html {
 #navbar {
   display: flex;
   align-items: center;
-  position: sticky;
+  background-color: black;
+  opacity: 0.9;
+  position:sticky;
   top: 0px;
   z-index: 1000; /* Set a higher z-index for the navbar */
 }
@@ -25,14 +27,14 @@ html {
 
 #navbar::before {
   content: "";
-  background-color: black;
+  /* background-color: black; */
   position: absolute;
   top: 0px;
   left: 0px;
   height: 85%;
   width: 100%;
   z-index: -1;
-  opacity: 0.7;
+  /* opacity: 0.9; */
 }
 
 /* Navigation Bar: Logo and Image */
@@ -74,11 +76,13 @@ html {
   color: black;
   background-color: white;
   transform: scale(1.5);
+  text-decoration:underline;
 }
 
 /* Home Section */
 #Home-Section {
   display: flex;
+   position: relative; /*Set position to enable absolute positioning of pseudo-element */
   flex-direction: column;
   padding: 3px 200px;
   height: 100vh; /* Adjusted height to cover the whole screen */
@@ -113,12 +117,9 @@ html {
 
 /* Services Section */
 #Services-Section {
-  height: 80vh; /* Adjusted height to cover the whole screen */
-  margin-left: auto;
-  margin-right: auto; 
-  margin-top: auto;
-  margin-bottom: auto;
+  height: auto; /* Adjusted height to cover the whole screen */
 }
+
 #services {
   margin: 34px;
   display: flex;
@@ -143,49 +144,19 @@ html {
   font-family: "Bree Serif", serif;
 }
 
-/* Partners Section */
-#Partners-Section {
-  position: relative;
-}
-
-#Partners-Section::before {
-  content: "";
-  position: absolute;
-  background: url("background.jpg") no-repeat center center/cover;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.4;
-}
-
-#Partners {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Partners-item {
-  padding: 34px;
-}
-
-#Partners img {
-  height: 124px;
-}
 /* Contact Section */
 #Contact-Section {
-  position: relative;
-  height: 80vh; /* Adjusted height to cover the whole screen */
-  z-index: 999; /* Set a lower z-index for the Contact Section */
+  height: auto; 
+  position: relative; /* Set position to enable absolute positioning of pseudo-element */
 }
-
 #Contact-Section::before {
   content: "";
   position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
   z-index: -1;
   opacity: 0.6;
-  background: url("contact.jpg") no-repeat center center/cover;
+  background: url("contact.jpg") no-repeat top center/cover; /* Set background image properties */
 }
 
 #contact-box {
@@ -215,7 +186,7 @@ html {
 #submit_form {
   text-align: center;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
   width: 30%;
 }
 
@@ -224,6 +195,35 @@ html {
   font-size: 1.1rem;
   font-family: "Bree Serif", serif;
   margin-bottom: 8px;
+}
+
+/* Partners Section */
+#Partners-Section {
+  position: relative;
+}
+
+#Partners-Section::before {
+  content: "";
+  position: absolute;
+  background: url("background.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+#Partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Partners-item {
+  padding: 34px;
+}
+
+#Partners img {
+  height: 124px;
 }
 
 footer {
