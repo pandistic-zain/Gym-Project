@@ -12,6 +12,9 @@ html {
 :root {
   --navbar-height: 59px;
 }
+header{
+  position:sticky;
+}
 
 /* Navigation Bar */
 #navbar {
