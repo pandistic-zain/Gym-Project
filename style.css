@@ -69,15 +69,17 @@ header{
   display: block;
   padding: 2px 20px;
   margin-top: -5px;
-  border-radius: 20px;
+
   text-decoration: none;
 }
 
 #navbar ul li a:hover {
   color: black;
+  border-radius: 20px;
   background-color: white;
   transform: scale(1.5);
   text-decoration:underline;
+  font-weight: bold;
 }
 
 /* Home Section */

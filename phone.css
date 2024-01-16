@@ -10,12 +10,13 @@
   padding-top: -10px;
 }
 #navbar ul li a:hover {
-  color: black;
-  background-color: white;
   transform: scale(1.2);
-  text-decoration: underline;
-  padding-bottom: 10px;
-  font-weight: bold;
+  border-radius: 10px;
+  padding-top: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 3px;
+
 }
 /* Home section */
 #home {
