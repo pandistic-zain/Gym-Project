@@ -61,5 +61,16 @@
     trainer.addEventListener("click", function () {
       window.location.href = "https://www.movenfit.pk/";
     });
+
+    // Personal-Logo handling
+    const Instagram = document.getElementById("Instagram");
+    const Linkdin = document.getElementById("Linkdin");
+    Instagram.addEventListener("click", function () {
+      window.location.href = "https://www.instagram.com/pandistic._.zain/";
+    });
+    Linkdin.addEventListener("click", function () {
+      window.location.href =
+        "https://www.linkedin.com/in/zain-ul-abideen-b9215a283/";
+    });
   });
 })();
