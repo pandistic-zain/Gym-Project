@@ -284,10 +284,12 @@ footer {
   justify-content: center;
   align-items: center;
   filter: invert(100%);
+  
 }
 .personal-logos img {
-  max-width: 100%; /* Set the maximum width of the image to be 100% of its container */
-  height: auto;    /* Ensure the height adjusts proportionally based on the width */
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;  
 }
 .center {
   text-align: center;
