@@ -67,5 +67,11 @@
       window.location.href =
         "https://www.linkedin.com/in/zain-ul-abideen-b9215a283/";
     });
+    // Register-Online handling
+    const registerBtn = document.getElementById("Register-btn");
+
+    registerBtn.addEventListener("click", function () {
+      window.location.href = "https://forms.gle/w1XZWim3oTgB88qt5";
+    });
   });
 })();
