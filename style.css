@@ -24,18 +24,9 @@ header {
 /* Navigation Bar */
 #navbar {
   display: flex;
+  justify-content: space-between; /* Distribute items at both ends */
   align-items: center;
-}
-
-
-#navbar::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 85%;
-  width: 100%;
-  z-index: -1;
+  margin: auto;
 }
 
 /* Navigation Bar: Logo and Image */
@@ -53,7 +44,6 @@ header {
 }
 
 /* Navigation Bar: List Styling */
-
 #navbar ul {
   display: flex;
   font-family: "Baloo Bhai", cursive;
@@ -61,7 +51,7 @@ header {
 
 #navbar ul li {
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 #navbar ul li a {
@@ -69,17 +59,41 @@ header {
   display: block;
   padding: 2px 20px;
   margin-top: -5px;
-
   text-decoration: none;
 }
 
 #navbar ul li a:hover {
   color: black;
   border-radius: 20px;
-  background-color: white;
-  transform: scale(1.5);
+  background-color: rgb(255, 255, 255);
   text-decoration: underline;
   font-weight: bold;
+}
+
+/* Login and Register Buttons */
+.admin-area {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#loginBtn,
+#registerBtn {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  background-color: #f2f2f2;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#loginBtn:hover,
+#registerBtn:hover {
+  background-color: black;
+  color: white;
+  text-decoration: underline;
 }
 
 /* Home Section */
