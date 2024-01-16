@@ -5,21 +5,26 @@
 }
 
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 /* CSS Variables */
 :root {
   --navbar-height: 59px;
 }
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: black;
+  opacity: 0.9;
+}
+
 /* Navigation Bar */
 #navbar {
   display: flex;
   align-items: center;
-  background-color: black;
-  opacity: 0.9;
-  top: 0px;
-  z-index: 1000; /* Set a higher z-index for the navbar */
 }
 
 
@@ -73,14 +78,14 @@ html {
   border-radius: 20px;
   background-color: white;
   transform: scale(1.5);
-  text-decoration:underline;
+  text-decoration: underline;
   font-weight: bold;
 }
 
 /* Home Section */
 #Home-Section {
   display: flex;
-   position: relative; /*Set position to enable absolute positioning of pseudo-element */
+  position: relative; /*Set position to enable absolute positioning of pseudo-element */
   flex-direction: column;
   padding: 3px 200px;
   height: 100vh; /* Adjusted height to cover the whole screen */
@@ -144,7 +149,7 @@ html {
 
 /* Contact Section */
 #Contact-Section {
-  height: auto; 
+  height: auto;
   position: relative; /* Set position to enable absolute positioning of pseudo-element */
 }
 #Contact-Section::before {

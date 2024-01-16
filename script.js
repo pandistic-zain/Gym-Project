@@ -36,15 +36,32 @@
       // Perform form validation (you can add your own validation logic)
 
       // Placeholder for sending data to a server (backend)
-      // In a real-world scenario, you would send this data to a server using AJAX or fetch API
 
-      // Reset the form after submission
       form.reset();
 
       // Optionally, display a success message or perform any other post-submission action
       alert("Form submitted successfully!");
     });
+    // Services-Box handling
+    document.addEventListener("DOMContentLoaded", function () {
+      const services = document.querySelector("#services");
+      services.addEventListener("click", function (event) {
+        const wears = document.getElementById("Wears");
+        const supplements = document.getElementById("Supplements");
+        const trainer = document.getElementById("Trainer");
 
-    // You can add more JavaScript functionalities as needed for your project
+        wears.addEventListener("click", function () {
+          window.location.href = "https://www.gymarmour.co/";
+        });
+
+        supplements.addEventListener("click", function () {
+          window.location.href = "https://www.bravonutrition.pk/";
+        });
+
+        trainer.addEventListener("click", function () {
+          window.location.href = "https://www.movenfit.pk/";
+        });
+      });
+    });
   });
 })();
