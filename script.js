@@ -73,5 +73,47 @@
     registerBtn.addEventListener("click", function () {
       window.location.href = "https://forms.gle/w1XZWim3oTgB88qt5";
     });
+    // Function to toggle the visibility of the login section
+    function toggleLoginSection() {
+      const loginSection = document.getElementById("loginSection");
+      if (loginSection) {
+        loginSection.classList.toggle("active");
+      }
+    }
+
+    // Function to handle the login attempt
+    function attemptLogin(credentials) {
+      // Add your login logic here
+      // For demonstration purposes, let's assume a simple check for a hardcoded username and password
+      const validUsername = "pandistic._.zain";
+      const validPassword = "_Zain_56";
+
+      if (
+        credentials &&
+        credentials.username === validUsername &&
+        credentials.password === validPassword
+      ) {
+        // If login is successful, hide the login section
+     
+        // You can also add additional logic based on the login result
+        console.log("Login successful");
+      } else {
+        // Handle unsuccessful login attempt, show error message, etc.
+        console.log("Login failed");
+      }
+    }
+      const loginButton = document.getElementById("loginBtn");
+      if (loginButton) {
+        loginButton.addEventListener("click", () => {
+          toggleLoginSection();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const credentials = { username, password };
+          const submit = document.getElementById("submit_login");
+          submit.addEventListener("click",()=>{
+            attemptLogin(credentials);
+          });
+        });
+      }
   });
 })();
