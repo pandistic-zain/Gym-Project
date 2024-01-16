@@ -34,14 +34,9 @@
       const email = document.getElementById("email").value;
       const phone = document.getElementById("phone").value;
       const message = document.getElementById("message").value;
-
-      // Perform form validation (you can add your own validation logic)
-
       // Placeholder for sending data to a server (backend)
-
       form.reset();
-
-      // Optionally, display a success message or perform any other post-submission action
+      // Optional
       alert("Form submitted successfully!");
     });
 
