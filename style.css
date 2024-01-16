@@ -13,7 +13,7 @@ html {
   --navbar-height: 59px;
 }
 header{
-  position:sticky;
+
 }
 
 /* Navigation Bar */
@@ -22,7 +22,6 @@ header{
   align-items: center;
   background-color: black;
   opacity: 0.9;
-  position:sticky;
   top: 0px;
   z-index: 1000; /* Set a higher z-index for the navbar */
 }
@@ -160,6 +159,7 @@ header{
   z-index: -1;
   opacity: 0.6;
   background: url("Pictures/contact.jpg") no-repeat top center/cover; /* Set background image properties */
+  filter: blur(12px);
 }
 
 #contact-box {
@@ -213,6 +213,7 @@ header{
   height: 100%;
   z-index: -1;
   opacity: 0.4;
+  filter: blur(12px);
 }
 
 #Partners {
