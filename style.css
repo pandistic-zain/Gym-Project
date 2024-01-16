@@ -232,11 +232,7 @@ header {
   height: 124px;
 }
 
-footer {
-  background: black;
-  color: white;
-  padding: 9px 20px;
-}
+
 
 /* Utility Classes */
 .h-primary {
@@ -272,6 +268,28 @@ footer {
   border-radius: 9px;
   text-shadow: -1px -1px 2px brown;
 }
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between; /* Align content with space between elements */
+  align-items: center; /* Vertically align content */
+  background: black;
+  color: white;
+  padding: 9px 20px;
+}
+
+/* Optionally, add a container for personal logos to center them */
+.personal-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: invert(100%);
+}
+.personal-logos img {
+  max-width: 100%; /* Set the maximum width of the image to be 100% of its container */
+  height: auto;    /* Ensure the height adjusts proportionally based on the width */
+}
 .center {
   text-align: center;
 }
+
