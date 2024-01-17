@@ -70,6 +70,7 @@ header {
   font-weight: bold;
 }
 
+
 /* Login and Register Buttons */
 .admin-area {
   display: flex;
@@ -98,9 +99,8 @@ header {
   text-decoration: underline;
 }
 
-
 /* Hide login section by default */
-#loginSection {
+#loginSection.nonactive {
   display: none;
   position: fixed;
   top: 50%;
@@ -109,7 +109,7 @@ header {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1001; /* Ensure the login section appears above the header */
+  z-index: 1001;
 }
 
 /* Show login section when active */
@@ -128,6 +128,7 @@ header {
   display: block;
   margin-bottom: 10px;
 }
+
 
 /* Home Section */
 #Home-Section {

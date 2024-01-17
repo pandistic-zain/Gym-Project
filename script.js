@@ -16,9 +16,7 @@
       const targetElement = document.getElementById(targetId);
 
       window.scrollTo({
-        top:
-          targetElement.offsetTop -
-          document.getElementById("navbar").offsetHeight,
+        top: targetElement.offsetTop - document.getElementById("navbar").offsetHeight,
         behavior: "smooth",
       });
     }
@@ -34,8 +32,10 @@
       const email = document.getElementById("email").value;
       const phone = document.getElementById("phone").value;
       const message = document.getElementById("message").value;
+
       // Placeholder for sending data to a server (backend)
       form.reset();
+
       // Optional
       alert("Form submitted successfully!");
     });
@@ -60,27 +60,62 @@
     // Personal-Logo handling
     const Instagram = document.getElementById("Instagram");
     const Linkdin = document.getElementById("Linkdin");
+
     Instagram.addEventListener("click", function () {
       window.location.href = "https://www.instagram.com/pandistic._.zain/";
     });
+
     Linkdin.addEventListener("click", function () {
-      window.location.href =
-        "https://www.linkedin.com/in/zain-ul-abideen-b9215a283/";
+      window.location.href = "https://www.linkedin.com/in/zain-ul-abideen-b9215a283/";
     });
+
     // Register-Online handling
     const registerBtn = document.getElementById("Register-btn");
 
     registerBtn.addEventListener("click", function () {
       window.location.href = "https://forms.gle/w1XZWim3oTgB88qt5";
     });
+
     // Function to toggle the visibility of the login section
     function toggleLoginSection() {
       const loginSection = document.getElementById("loginSection");
-      if (loginSection) {
+      const headerSection = document.getElementById("header");
+      const mainSection = document.querySelector("main");
+      const footerSection = document.querySelector("footer");
+
+      if (loginSection && headerSection && mainSection && footerSection) {
         loginSection.classList.toggle("active");
+
+        // If login section is active, hide header, main, and footer
+        if (loginSection.classList.contains("active")) {
+          headerSection.style.display = "none";
+          mainSection.style.display = "none";
+          footerSection.style.display = "none";
+        } else {
+          // If login section is not active, display header, main, and footer
+          headerSection.style.display = "block";
+          mainSection.style.display = "block";
+          footerSection.style.display = "block";
+        }
       }
     }
 
+    // Event listener for login button click
+    const loginButton = document.getElementById("loginBtn");
+    if (loginButton) {
+      loginButton.addEventListener("click", () => {
+        toggleLoginSection();
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const credentials = { username, password };
+
+        // Event listener for submit login button click
+        const submit = document.getElementById("submitLogin");
+        submit.addEventListener("click", () => {
+          attemptLogin(credentials);
+        });
+      });
+    }
     // Function to handle the login attempt
     function attemptLogin(credentials) {
       // Add your login logic here
@@ -94,7 +129,8 @@
         credentials.password === validPassword
       ) {
         // If login is successful, hide the login section
-     
+        toggleLoginSection();
+
         // You can also add additional logic based on the login result
         console.log("Login successful");
       } else {
@@ -102,18 +138,5 @@
         console.log("Login failed");
       }
     }
-      const loginButton = document.getElementById("loginBtn");
-      if (loginButton) {
-        loginButton.addEventListener("click", () => {
-          toggleLoginSection();
-          const username = document.getElementById("username").value;
-          const password = document.getElementById("password").value;
-          const credentials = { username, password };
-          const submit = document.getElementById("submit_login");
-          submit.addEventListener("click",()=>{
-            attemptLogin(credentials);
-          });
-        });
-      }
   });
 })();
