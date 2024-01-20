@@ -2,6 +2,7 @@
 #navbar {
   flex-direction: column;
 }
+
 #navbar ul li a {
   font-size: 1rem;
   padding: 0px 14px;
@@ -9,28 +10,27 @@
   padding-top: -10px;
 }
 #navbar ul li a:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   border-radius: 10px;
   padding-top: 3px;
   padding-left: 2px;
   padding-right: 2px;
   padding-bottom: 3px;
-}
- /* Home section */
-  #home {
-    height: auto;
-    padding: 3px 14px;
-  }
-  #home::before {
-    height: 200px;
-  }
-  #Home-Section h1 {
-    font-size: 2rem;
-  }
-  #Home-Section p {
-    font-size: 1rem;
-  }
 
+}
+/* Home section */
+#home {
+  height: 370px;
+  padding: 3px 28px;
+}
+
+#home::before {
+  height: 480px;
+}
+
+#home p {
+  font-size: 13px;
+}
 
 /* Services section */
 #services {
