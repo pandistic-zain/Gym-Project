@@ -12,6 +12,7 @@ html {
 :root {
   --navbar-height: 59px;
 }
+
 /* Header */
 header {
   position: sticky;
@@ -24,7 +25,7 @@ header {
 /* Navigation Bar */
 #navbar {
   display: flex;
-  justify-content: space-between; /* Distribute items at both ends */
+  justify-content: space-between;
   align-items: center;
   margin: auto;
 }
@@ -70,7 +71,6 @@ header {
   font-weight: bold;
 }
 
-
 /* Login and Register Buttons */
 .admin-area {
   display: flex;
@@ -81,7 +81,7 @@ header {
 #loginBtn,
 #registerBtn {
   padding: 10px 15px;
-  font-size: 1.0rem;
+  font-size: 1rem;
   background-color: #f2f2f2;
   color: #000000;
   font-weight: bold;
@@ -129,14 +129,13 @@ header {
   margin-bottom: 10px;
 }
 
-
 /* Home Section */
 #Home-Section {
   display: flex;
-  position: relative; /*Set position to enable absolute positioning of pseudo-element */
+  position: relative;
   flex-direction: column;
   padding: 3px 200px;
-  height: 100vh; /* Adjusted height to cover the whole screen */
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -145,7 +144,7 @@ header {
   content: "";
   position: absolute;
   background: url("Pictures/bg.gif") no-repeat center center/cover;
-  height: 100%; /* Adjusted height to cover the whole screen */
+  height: 100%;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -168,22 +167,42 @@ header {
 
 /* Services Section */
 #Services-Section {
-  height: auto; /* Adjusted height to cover the whole screen */
+  height: auto;
 }
 
 #services {
-  margin: 34px;
+  margin: 2%;
   display: flex;
 }
 
 #services .box {
-  border: 2px solid brown;
+  box-sizing: border-box;
+  border: 2px solid #a52a2a;
   padding: 34px;
   margin: 1px 15px;
   border-radius: 28px;
   background: #f2f2f2;
   margin-bottom: 20px;
   cursor: pointer;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1; /* Initial opacity set to 1 for normal state */
+  transform: translateY(0); /* Initial transform set to 0 for normal state */
+}
+
+/* Add transition effects for the arrival and removal of boxes */
+#services .box.arrival {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+#services .box.removal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#services .box:hover {
+  background-color: #b8b8b8;
+  transform: scale(1.05); /* Scale up on hover for a subtle effect */
 }
 
 #services .box img {
@@ -193,14 +212,16 @@ header {
 }
 
 #services .box p {
-  font-family: "Bree Serif", serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1em;
 }
 
 /* Contact Section */
 #Contact-Section {
   height: auto;
-  position: relative; /* Set position to enable absolute positioning of pseudo-element */
+  position: relative;
 }
+
 #Contact-Section::before {
   content: "";
   position: absolute;
@@ -208,7 +229,7 @@ header {
   width: 100%;
   z-index: -1;
   opacity: 0.6;
-  background: url("Pictures/contact.jpg") no-repeat top center/cover; /* Set background image properties */
+  background: url("Pictures/contact.jpg") no-repeat top center/cover;
   filter: blur(12px);
 }
 
@@ -280,8 +301,6 @@ header {
   height: 124px;
 }
 
-
-
 /* Utility Classes */
 .h-primary {
   font-family: "Bree Serif", serif;
@@ -316,11 +335,12 @@ header {
   border-radius: 9px;
   text-shadow: -1px -1px 2px brown;
 }
+
 /* Footer */
 footer {
   display: flex;
-  justify-content: space-between; /* Align content with space between elements */
-  align-items: center; /* Vertically align content */
+  justify-content: space-between;
+  align-items: center;
   background: black;
   color: white;
   padding: 9px 20px;
@@ -332,14 +352,14 @@ footer {
   justify-content: center;
   align-items: center;
   filter: invert(100%);
-  
 }
+
 .personal-logos img {
   cursor: pointer;
   max-width: 100%;
-  height: auto;  
+  height: auto;
 }
+
 .center {
   text-align: center;
 }
-
