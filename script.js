@@ -16,9 +16,7 @@
       const targetElement = document.getElementById(targetId);
 
       window.scrollTo({
-        top:
-          targetElement.offsetTop -
-          document.getElementById("navbar").offsetHeight,
+        top: targetElement.offsetTop - document.getElementById("navbar").offsetHeight,
         behavior: "smooth",
       });
     }
@@ -68,8 +66,7 @@
     });
 
     Linkdin.addEventListener("click", function () {
-      window.location.href =
-        "https://www.linkedin.com/in/zain-ul-abideen-b9215a283/";
+      window.location.href = "https://www.linkedin.com/in/zain-ul-abideen-b9215a283/";
     });
 
     // Register-Online handling
@@ -141,41 +138,5 @@
         console.log("Login failed");
       }
     }
-    const boxes = document.querySelectorAll(".box");
-
-    // Function to check if an element is in the viewport
-    const isInViewport = (element) => {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    };
-    
-    // Add transition effects on page load with immediate arrival after Services Section exposes to the screen
-    boxes.forEach((box, index) => {
-        setTimeout(() => {
-            if (isInViewport(box)) {
-                box.classList.add("arrival");
-            }
-        }, index * 300); // Adjust the delay for the immediate arrival transition
-    });
-    
-    // Add transition effects for box removal when Services Section exposes to the screen or removes from the screen
-    window.addEventListener("scroll", function () {
-        boxes.forEach((box, index) => {
-            setTimeout(() => {
-                if (isInViewport(box)) {
-                    box.classList.add("arrival");
-                    box.classList.remove("removal"); // Remove removal class if box is in viewport
-                } else {
-                    box.classList.remove("arrival"); // Remove arrival class if box is not in viewport
-                    box.classList.add("removal");
-                }
-            }, index * 300); // Adjust the delay for the transitions
-        });
-    });
   });
 })();
