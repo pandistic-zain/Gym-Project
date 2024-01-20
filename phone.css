@@ -71,21 +71,23 @@
   margin-bottom: 35px;
 }
 .admin-area {
-  margin-top: 10px;
+  display: none;
+  /* margin-top: 10px;
   margin-right: 0;
-  justify-content: center;
+  justify-content: center; 
+*/
 }
-
+/* 
 #loginBtn,
 #registerBtn {
   margin: 10px 0;
-}
+} */
 
-/* Adjust styles for the login section on small screens */
+/* Adjust styles for the login section on small screens
 #loginSection {
   width: 80%;
 }
 
 #loginSection form {
   width: 100%;
-}
+} */

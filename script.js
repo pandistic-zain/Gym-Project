@@ -76,67 +76,67 @@
       window.location.href = "https://forms.gle/w1XZWim3oTgB88qt5";
     });
 
-    // Function to toggle the visibility of the login section
-    function toggleLoginSection() {
-      const loginSection = document.getElementById("loginSection");
-      const headerSection = document.getElementById("header");
-      const mainSection = document.querySelector("main");
-      const footerSection = document.querySelector("footer");
+    // // Function to toggle the visibility of the login section
+    // function toggleLoginSection() {
+    //   const loginSection = document.getElementById("loginSection");
+    //   const headerSection = document.getElementById("header");
+    //   const mainSection = document.querySelector("main");
+    //   const footerSection = document.querySelector("footer");
 
-      if (loginSection && headerSection && mainSection && footerSection) {
-        loginSection.classList.toggle("active");
+    //   if (loginSection && headerSection && mainSection && footerSection) {
+    //     loginSection.classList.toggle("active");
 
-        // If login section is active, hide header, main, and footer
-        if (loginSection.classList.contains("active")) {
-          headerSection.style.display = "none";
-          mainSection.style.display = "none";
-          footerSection.style.display = "none";
-        } else {
-          // If login section is not active, display header, main, and footer
-          headerSection.style.display = "block";
-          mainSection.style.display = "block";
-          footerSection.style.display = "block";
-        }
-      }
-    }
+    //     // If login section is active, hide header, main, and footer
+    //     if (loginSection.classList.contains("active")) {
+    //       headerSection.style.display = "none";
+    //       mainSection.style.display = "none";
+    //       footerSection.style.display = "none";
+    //     } else {
+    //       // If login section is not active, display header, main, and footer
+    //       headerSection.style.display = "block";
+    //       mainSection.style.display = "block";
+    //       footerSection.style.display = "block";
+    //     }
+    //   }
+    // }
 
-    // Event listener for login button click
-    const loginButton = document.getElementById("loginBtn");
-    if (loginButton) {
-      loginButton.addEventListener("click", () => {
-        toggleLoginSection();
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-        const credentials = { username, password };
+    // // Event listener for login button click
+    // const loginButton = document.getElementById("loginBtn");
+    // if (loginButton) {
+    //   loginButton.addEventListener("click", () => {
+    //     toggleLoginSection();
+    //     const username = document.getElementById("username").value;
+    //     const password = document.getElementById("password").value;
+    //     const credentials = { username, password };
 
-        // Event listener for submit login button click
-        const submit = document.getElementById("submitLogin");
-        submit.addEventListener("click", () => {
-          attemptLogin(credentials);
-        });
-      });
-    }
-    // Function to handle the login attempt
-    function attemptLogin(credentials) {
-      // Add your login logic here
-      // For demonstration purposes, let's assume a simple check for a hardcoded username and password
-      const validUsername = "pandistic._.zain";
-      const validPassword = "_Zain_56";
+    //     // Event listener for submit login button click
+    //     const submit = document.getElementById("submitLogin");
+    //     submit.addEventListener("click", () => {
+    //       attemptLogin(credentials);
+    //     });
+    //   });
+    // }
+    // // Function to handle the login attempt
+    // function attemptLogin(credentials) {
+    //   // Add your login logic here
+    //   // For demonstration purposes, let's assume a simple check for a hardcoded username and password
+    //   const validUsername = "pandistic._.zain";
+    //   const validPassword = "_Zain_56";
 
-      if (
-        credentials &&
-        credentials.username === validUsername &&
-        credentials.password === validPassword
-      ) {
-        // If login is successful, hide the login section
-        toggleLoginSection();
+    //   if (
+    //     credentials &&
+    //     credentials.username === validUsername &&
+    //     credentials.password === validPassword
+    //   ) {
+    //     // If login is successful, hide the login section
+    //     toggleLoginSection();
 
-        // You can also add additional logic based on the login result
-        console.log("Login successful");
-      } else {
-        // Handle unsuccessful login attempt, show error message, etc.
-        console.log("Login failed");
-      }
-    }
+    //     // You can also add additional logic based on the login result
+    //     console.log("Login successful");
+    //   } else {
+    //     // Handle unsuccessful login attempt, show error message, etc.
+    //     console.log("Login failed");
+    //   }
+    // }
   });
 })();
