@@ -3,53 +3,21 @@
   flex-direction: column;
 }
 
-#navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#navbar ul li {
-  position: relative;
-}
-
 #navbar ul li a {
   font-size: 1rem;
-  padding: 10px 14px; /* Adjusted padding for better spacing */
-  text-decoration: none;
-  color: #aaaaaa; /* Change the text color */
-  display: block;
-  transition: all 0.3s ease-in-out;
+  padding: 0px 14px;
+  padding-bottom: 30px;
+  padding-top: -10px;
 }
-
 #navbar ul li a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   border-radius: 10px;
-  padding: 10px 14px; /* Adjusted padding for hover effect */
-  background-color: #eee; /* Change the background color on hover */
-}
+  padding-top: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 3px;
 
-/* Dropdown styles */
-#navbar ul .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff; /* Background color for the dropdown */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
-  z-index: 1;
 }
-
-#navbar ul .dropdown-content li {
-  padding: 10px;
-}
-
-#navbar ul .dropdown-content li a {
-  padding: 10px;
-}
-
-#navbar ul li:hover .dropdown-content {
-  display: block;
-}
-
 /* Home section */
 #home {
   height: 370px;
